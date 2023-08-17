@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<body>
+<div th:replace="/common/header.html :: header"></div>
+<div class="container">
+    <div class="col-md-6 offset-md-3 signupbox" >
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-6 p-3">
+                <form id="signupform" class="p-3">
+                    <h6 class="text-center"> 회원가입 </h6>
+                    <div class="form-floating mb-2">
+                        <input type="text" name="accountId" id="accountId" class="form-control rounded-4" placeholder="아이디">
+                        <label for="accountId"> 회원 아이디 </label>
+                    </div>
+                    <button type="button" onclick="accountService.searchId()" class="w-100 btn btn-lg rounded-4 btn signupbtn" id="idDuple">중복확인</button>
+                    <div class="form-floating mb-2">
+                        <input type="password" name="accountPassword" id="accountPassword" class="form-control rounded-4" placeholder="비밀번호">
+                        <label for="accountPassword"> 회원 비밀번호 </label>
+                    </div>
+                    <div class="form-floating mb-2">
+                        <input type="password" id="checkPassword" class="form-control rounded-4" placeholder="비밀번호">
+                        <label for="checkPassword"> 비밀번호 확인 </label>
+                    </div>
+                    <div class="form-floating mb-2">
+                        <input type="text" name="accountName" id="accountName" class="form-control rounded-4" placeholder="아이디">
+                        <label for="accountName"> 회원 이름 </label>
+                    </div>
+                    <div class="form-floating mb-2">
+                        <input type="text" name="accountEmail" id="accountEmail" class="form-control rounded-4" placeholder="아이디">
+                        <label for="accountEmail"> 회원 이메일 </label>
+                    </div>
+                </form>
+                <button type="button" onclick="accountService.signup()" class="w-100 btn btn-lg rounded-4 btn signupbtn" >회원가입</button>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</div>
+<div th:replace="/common/footer.html :: footer"></div>
+<script src="/js/account/account.js"></script>
+</body>
+</html>

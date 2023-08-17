@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<body xmlns:th="http://www.w3.org/1999/xhtml">
+
+<div  th:replace="common/header.html :: header"></div>
+
+<div class="container">
+
+    <form id="updateform">
+        제목 : <input type="text" id="boardTitle" name="boardTitle">
+        내용 : <input type="text" id="boardContents" name="boardContents">
+        <button type="button" onclick="board_update('update')">수정처리</button>
+    </form>
+
+    <a href="/board/list">목록보기</a>
+</div>
+<script src="/js/board/board.js"></script>
+<script>board_read(1)</script>
+</body>
+</html>

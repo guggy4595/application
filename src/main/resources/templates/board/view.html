@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div  th:replace="common/header.html :: header"></div>
+<div class="container">
+    <div id="boarddiv">
+
+    </div>
+    <a href="/board/main">목록보기</a>
+</div>
+
+<script src="/js/board/board.js"></script>
+<script>board_read(0)</script>
+</body>
+</html>
